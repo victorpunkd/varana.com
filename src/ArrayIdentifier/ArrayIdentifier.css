@@ -1,0 +1,13 @@
+.arrayIdentifier {
+  margin-left: 5px;
+  font-size: 10px;
+  transition: color 0.3s;
+}
+
+.activeIdentifier {
+  color: #b4252d;
+}
+
+.nonActiveIdentifier {
+  color: gray;
+}

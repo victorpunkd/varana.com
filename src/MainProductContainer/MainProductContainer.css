@@ -1,0 +1,46 @@
+.middleProduct {
+  width: 80%;
+  margin: auto;
+}
+
+.productInfo {
+  text-align: left;
+  padding: 10px 10px;
+}
+
+.mainProductImage {
+  width: 100%;
+  height: 100%;
+}
+
+.productName {
+  font-size: 15px;
+  color: black;
+  /* font-family: "Playfair Display", serif; */
+  font-weight: 600;
+}
+
+.productPrice {
+  /* font-family: "Oswald", sans-serif; */
+  color: #595757;
+}
+
+.mainContainerExtraInfo {
+  color: black;
+  margin-top: 10px;
+}
+
+.primaryTextMainContainer {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.secondaryTextMainContainer {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.mrpText {
+  color: gray;
+  font-size: 8px;
+}

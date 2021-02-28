@@ -1,0 +1,15 @@
+.createAccount {
+  float: left;
+  text-align: left;
+  margin-top: 10%;
+  padding: 2% 10%;
+  width: 100vw;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Varela", sans-serif;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}

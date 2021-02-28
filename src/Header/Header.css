@@ -1,0 +1,20 @@
+.header {
+  /* float: right; */
+  /* color: white; */
+  padding: 0% 3%;
+  width: 100%;
+}
+
+.headerIcon {
+  font-size: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.leftIcon {
+  float: left;
+}
+
+.rightIcons {
+  float: right;
+}

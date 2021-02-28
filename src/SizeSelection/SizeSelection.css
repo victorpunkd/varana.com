@@ -1,0 +1,15 @@
+.sizeSelectionMainDiv {
+  position: absolute;
+  z-index: 100;
+  bottom: 5;
+  width: 95vw;
+  height: 100vh;
+}
+
+.containerDiv {
+  width: 100%;
+  padding: 5% 5%;
+  background-color: white;
+  border: 1px solid white;
+  box-shadow: -1px 1px 5px 9px rgba(0, 0, 0, 0.75);
+}

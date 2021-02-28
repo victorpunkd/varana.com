@@ -1,0 +1,19 @@
+.orderCard {
+  margin-top: 5%;
+  border: 1px solid #b4252d;
+  width: 100%;
+  text-align: left;
+  padding: 2% 2%;
+}
+
+.orderInfo {
+  margin-top: 1%;
+}
+
+.dataStyle {
+  font-weight: 500;
+}
+
+.orderStatus {
+  font-size: 20px;
+}

@@ -1,0 +1,19 @@
+.orderTrackDetails {
+  width: 100vw;
+  padding: 2% 3%;
+  margin-top: 10%;
+}
+
+.mainHeading {
+  font-size: 25px;
+  margin-top: 2%;
+}
+
+.orderDetailsBody {
+  margin-top: 5%;
+  padding: 2% 2%;
+}
+
+.orderProductCards {
+  max-height: 60vh;
+}

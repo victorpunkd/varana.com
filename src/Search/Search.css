@@ -1,0 +1,24 @@
+.search {
+  background-color: transparent;
+  width: 100%;
+  text-align: left;
+  /* color: white; */
+  padding: 2% 3%;
+}
+
+.searchText {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  /* color: white; */
+  padding: 0% 3%;
+  font-weight: normal;
+  border-bottom: 1px solid gray;
+  height: 18px;
+  margin-left: 10px;
+  width: 67vw;
+}

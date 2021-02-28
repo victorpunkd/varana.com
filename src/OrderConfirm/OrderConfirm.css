@@ -1,0 +1,21 @@
+.orderConfirm {
+  width: 100vw;
+  padding: 2% 3%;
+  margin-top: 10%;
+}
+
+.orderTick {
+  font-size: 100px;
+}
+
+.orderReceived {
+  font-size: 25px;
+}
+
+.orderID {
+  margin-top: 5%;
+}
+
+.orderInfo {
+  margin-top: 5%;
+}

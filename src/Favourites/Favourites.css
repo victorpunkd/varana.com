@@ -1,0 +1,14 @@
+.mainDivFavourites {
+  float: center;
+  text-align: center;
+  margin-top: 10%;
+  padding: 0% 0%;
+  width: 100vw;
+}
+
+.products {
+  margin-top: 2%;
+  overflow: scroll;
+  max-height: 70.5vh;
+  padding: 0% 0%;
+}

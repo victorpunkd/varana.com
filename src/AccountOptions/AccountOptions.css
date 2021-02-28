@@ -1,0 +1,18 @@
+.accountOptions {
+  width: 35%;
+  padding: 1% 1%;
+  background-color: black;
+  position: absolute;
+  z-index: 20;
+  top: 7%;
+  right: 7%;
+}
+
+.options {
+  padding: 5% 5%;
+  color: white;
+  font-size: 12px;
+  width: 100%;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}

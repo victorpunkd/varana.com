@@ -1,0 +1,50 @@
+.homeIntroContainer {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.typeIntro {
+  margin-top: 40%;
+  color: white;
+}
+
+.primaryText {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.HomeIntrobutton {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 2px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.secondaryText {
+  font-size: 15px;
+  padding: 0% 10%;
+}
+
+.headingText {
+  /* margin-top: 90%;
+  line-height: 200%; */
+  position: absolute;
+  bottom: -8vh;
+  width: 100%;
+}
+
+.headingPrimaryText {
+  color: white;
+  font-size: 50px;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.headingSecondaryText {
+  color: lightgray;
+  font-size: 20px;
+  margin-left: 10px;
+  letter-spacing: 10px;
+}

@@ -1,0 +1,11 @@
+.orderTrack {
+  width: 100vw;
+  padding: 2% 3%;
+  margin-top: 10%;
+}
+
+.trackOrderCards {
+  max-height: 70vh;
+  overflow-y: scroll;
+  padding: 2% 2%;
+}

@@ -1,0 +1,42 @@
+.sideBar {
+  width: 40vw;
+  margin-top: 15%;
+  text-align: left;
+  max-height: 70vh;
+  position: absolute;
+  left: 0%;
+  z-index: 10;
+  padding: 2% 2%;
+}
+
+.sideBarHeading {
+  border-bottom: 1px solid black;
+  padding: 5% 1%;
+  font-size: 13px;
+  font-family: "Varela", sans-serif;
+}
+
+.section {
+  margin-top: 10%;
+}
+
+.sectionHeading {
+  font-size: 13px;
+  font-family: "Varela", sans-serif;
+}
+
+.active {
+  color: #b4252d;
+}
+
+.sectionItems {
+  margin-top: 10%;
+  color: #b4252d;
+  font-size: 13px;
+  font-family: "Varela", sans-serif;
+}
+
+.itemInCollection {
+  margin-top: 5%;
+  border-bottom: 1px solid rgb(189, 187, 187);
+}

@@ -1,0 +1,30 @@
+.productConatinerLeft {
+  padding-right: 2%;
+  margin-top: 5%;
+}
+
+.productConatinerRight {
+  padding-left: 2%;
+  margin-top: 5%;
+}
+.productImageCard {
+  width: 100%;
+  height: 280px;
+}
+
+.productName {
+  text-align: left;
+  font-size: 12px !important;
+  color: black;
+  letter-spacing: 1px;
+  /* font-family: "Playfair Display", serif; */
+  font-family: "Comfortaa";
+  font-weight: 600;
+}
+
+.productPrice {
+  text-align: left;
+  /* font-family: "Oswald", sans-serif; */
+  font-family: "Comfortaa";
+  color: #595757;
+}

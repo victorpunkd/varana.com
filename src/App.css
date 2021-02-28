@@ -1,0 +1,30 @@
+.app {
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  min-height: 667px; /*707 is ideal*/
+  width: 100vw;
+  padding: 3.5% 0%;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Playfair Display", serif;
+}
+
+.body {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.primaryTextFont {
+  font-family: "Varela", sans-serif;
+}
+
+.secondaryTextFont {
+  font-family: "Roboto", sans-serif;
+}

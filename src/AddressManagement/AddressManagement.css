@@ -1,0 +1,12 @@
+.addressManagement {
+  float: left;
+  text-align: left;
+  margin-top: 10%;
+  padding: 2% 10%;
+  width: 100vw;
+}
+
+.addressCardContainers {
+  max-height: 70vh;
+  overflow: scroll;
+}

@@ -1,0 +1,11 @@
+.footer {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+}
+
+.brandIcon {
+  margin-left: 4%;
+}

@@ -1,0 +1,11 @@
+.cart {
+  width: 100vw;
+  padding: 2% 3%;
+  margin-top: 10%;
+}
+
+.edit {
+  color: gray;
+  font-family: "Varela", sans-serif;
+  font-weight: 600;
+}
