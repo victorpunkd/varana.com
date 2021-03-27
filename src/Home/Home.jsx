@@ -55,7 +55,11 @@ export class Home extends Component {
 
   render() {
     return (
-      <div className="apparel">
+      <div
+        className={
+          this.state.collectionSex !== 0 ? "apparel" : "apparelInHomeIntro"
+        }
+      >
         {/*<Search color={this.state.collectionSex === 0 ? "white" : "black"} />*/}
         <div
           className="apparelHeading"

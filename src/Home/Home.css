@@ -4,6 +4,12 @@
   height: 80vh;
 }
 
+.apparelInHomeIntro {
+  width: 100vw;
+  padding: 2% 0%;
+  height: 95vh;
+}
+
 .apparelHeading {
   float: left;
   color: white;
@@ -34,7 +40,7 @@
   font-size: 10px;
   color: white;
   position: absolute;
-  bottom: 3%;
+  bottom: 10%;
   width: 100%;
 }
 

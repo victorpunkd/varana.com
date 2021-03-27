@@ -14,12 +14,12 @@ export class ForgetPassword extends Component {
       isOTPSent: false,
       isButtonDisable: false,
       countDown: this.countDownTime,
-      data: []
+      data: [],
     };
     this.phoneNoRegex = /^\d{10}$/;
   }
 
-  handleInputChanged = event => {
+  handleInputChanged = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
@@ -43,7 +43,7 @@ export class ForgetPassword extends Component {
     this.setState({
       isPhoneValid: true,
       isOTPSent: true,
-      isButtonDisable: true
+      isButtonDisable: true,
     });
     let interval = setInterval(() => {
       this.setState({ countDown: this.state.countDown - 1 });
@@ -62,17 +62,17 @@ export class ForgetPassword extends Component {
 
   sendOTP = () => {
     fetch(`${getApiEndpoint()}/api/sendOTP/${this.state.phone}`)
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
-        data => {
+        (data) => {
           this.setState({
             data: data,
-            isOTPSent: true
+            isOTPSent: true,
           });
         },
-        error => {
+        (error) => {
           this.setState({
-            error
+            error,
           });
         }
       );
@@ -90,12 +90,12 @@ export class ForgetPassword extends Component {
     fetch(
       `${getApiEndpoint()}/api/checkOTP/${this.state.phone}/${this.state.OTP}`
     )
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
-        data => {
+        (data) => {
           this.setState(
             {
-              isOTPValid: data[0].code === 1 ? true : false
+              isOTPValid: data[0].code === 1 ? true : false,
             },
             () => {
               if (this.state.isOTPValid) {
@@ -104,9 +104,9 @@ export class ForgetPassword extends Component {
             }
           );
         },
-        error => {
+        (error) => {
           this.setState({
-            error
+            error,
           });
         }
       );
@@ -116,16 +116,16 @@ export class ForgetPassword extends Component {
     fetch(
       `${getApiEndpoint()}/api/getLogedInUserInformation/${this.state.phone}`
     )
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
-        data => {
+        (data) => {
           if (data.length > 0)
             this.props.handleIsUserExist(this.state.phone, true);
           else this.props.handleIsUserExist(this.state.phone, false);
         },
-        error => {
+        (error) => {
           this.setState({
-            error
+            error,
           });
         }
       );
@@ -194,7 +194,7 @@ export class ForgetPassword extends Component {
             </div>
             <div style={{ marginTop: "5%" }}>
               <button
-                className="w3-btn button w3-black"
+                className="w3-btn button w3-white w3-border w3-border-black"
                 onClick={this.handleSignInClick}
               >
                 Sign In
@@ -206,7 +206,7 @@ export class ForgetPassword extends Component {
           <button
             disabled={this.state.isButtonDisable}
             onClick={this.handleSendOTPClick}
-            className="w3-btn w3-black button"
+            className="w3-btn w3-white w3-border w3-border-black button"
           >
             {this.state.countDown < this.countDownTime
               ? `Send again in ${this.state.countDown}`

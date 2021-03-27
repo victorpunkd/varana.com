@@ -6,7 +6,7 @@ export class Logo extends Component {
     return (
       <div>
         <img
-          src="https://varana-files.s3.us-east-2.amazonaws.com/static_images/varana_logo_red.png"
+          src="https://s3.ap-south-1.amazonaws.com/varana.com-files/static-images/logo/varana-logo-red.png"
           className="logo"
           alt="Varana Logo"
           onClick={this.props.logoClicked}

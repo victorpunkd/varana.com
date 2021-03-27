@@ -11,7 +11,7 @@ export class CreateAccount extends Component {
       email: "",
       name: "",
       password: "",
-      gender: ""
+      gender: "",
     };
     this.emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     this.phoneNoRegex = /^\d{10}$/;
@@ -41,9 +41,9 @@ export class CreateAccount extends Component {
         this.state.email
       }/${this.state.name}/${this.state.password}`
     )
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
-        data => {
+        (data) => {
           console.log(data[0].code);
           if (data[0].code === 201) {
             alert(
@@ -56,9 +56,9 @@ export class CreateAccount extends Component {
             this.props.createAccountDone();
           }
         },
-        error => {
+        (error) => {
           this.setState({
-            error
+            error,
           });
         }
       );
@@ -107,7 +107,7 @@ export class CreateAccount extends Component {
         <div>
           <button
             onClick={this.handleCreateAccountClick}
-            className="w3-btn w3-black button"
+            className="w3-btn w3-white w3-border w3-border-black button"
           >
             Create Account
           </button>

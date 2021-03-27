@@ -156,14 +156,14 @@ export class PlaceOrder extends Component {
 
           <div className="placeOrderButtonContainer">
             <button
-              className="w3-btn w3-black button"
+              className="w3-btn w3-white w3-border w3-border-black button"
               onClick={this.handlePlaceOrder}
             >
               PLACE YOUR ORDER
             </button>
 
             <div className="secondaryTextFont" style={{ fontSize: 8 }}>
-              By placing your order, you agree to  Varana's privacy notice and
+              By placing your order, you agree to Varana's privacy notice and
               condition of use.
             </div>
           </div>

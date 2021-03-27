@@ -164,7 +164,7 @@ export class OrderConfirm extends Component {
           </div>
           <button
             onClick={this.props.trackOrderClicked}
-            className="w3-btn w3-black button"
+            className="w3-btn w3-white w3-border w3-border-black button"
             style={{ marginTop: "10%" }}
           >
             Track Your Orders

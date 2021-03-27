@@ -13,7 +13,7 @@ export class AccountManagement extends Component {
       phone_no: "",
       email_id: "",
       name: "",
-      password: ""
+      password: "",
     };
     this.emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     this.phoneNoRegex = /^\d{10}$/;
@@ -30,22 +30,22 @@ export class AccountManagement extends Component {
         "loggedInUserPhoneNo"
       )}`
     )
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
-        data => {
+        (data) => {
           this.setState({
             isLoaded: true,
             data: data,
             phone_no: data[0].phone_no,
             email_id: data[0].email_id,
             name: data[0].name,
-            password: data[0].password
+            password: data[0].password,
           });
         },
-        error => {
+        (error) => {
           this.setState({
             isLoaded: true,
-            error
+            error,
           });
         }
       );
@@ -63,15 +63,15 @@ export class AccountManagement extends Component {
         this.state.email_id
       }/${this.state.name}/${this.state.password}`
     )
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
-        data => {
+        (data) => {
           console.log(data);
           if (data[0].code === 100) alert("Data Updated Successfully");
         },
-        error => {
+        (error) => {
           this.setState({
-            error
+            error,
           });
         }
       );
@@ -129,7 +129,7 @@ export class AccountManagement extends Component {
           </div>
           <button
             onClick={this.handleUpdateProfileClick}
-            className="w3-btn w3-black button"
+            className="w3-btn w3-white w3-border w3-border-black button"
           >
             UPDATE INFORMATION
           </button>

@@ -23,7 +23,7 @@ export class OrderCard extends Component {
         </div>
         <button
           onClick={() => this.props.orderDetailsClicked(this.props.order_id)}
-          className="w3-btn w3-black button"
+          className="w3-btn w3-white w3-border w3-border-black button"
           style={{ marginTop: "5%" }}
         >
           Order Details

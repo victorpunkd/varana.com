@@ -13,7 +13,7 @@ export class AddressManagemnet extends Component {
       data: [],
       isLoaded: false,
       addAddress: false,
-      fullAddress: []
+      fullAddress: [],
     };
   }
 
@@ -27,40 +27,40 @@ export class AddressManagemnet extends Component {
         "loggedInUserPhoneNo"
       )}`
     )
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
-        data => {
+        (data) => {
           this.setState({
             isLoaded: true,
-            data: data
+            data: data,
           });
         },
-        error => {
+        (error) => {
           this.setState({
             isLoaded: true,
-            error
+            error,
           });
         }
       );
   };
 
-  handleRemoveAddress = addressType => {
+  handleRemoveAddress = (addressType) => {
     fetch(
       `${getApiEndpoint()}/api/deleteAddress/${localStorage.getItem(
         "loggedInUserPhoneNo"
       )}/${addressType}`
     )
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
-        data => {
+        (data) => {
           if (data.length > 0 && data[0].code === 100) {
             alert("Address deleted");
             this.getAddress();
           }
         },
-        error => {
+        (error) => {
           this.setState({
-            error
+            error,
           });
         }
       );
@@ -74,35 +74,35 @@ export class AddressManagemnet extends Component {
     this.setState({ addAddress: false });
   };
 
-  handleEditAddressClick = addressType => {
+  handleEditAddressClick = (addressType) => {
     for (let i = 0; i < this.state.data.length; i++) {
       if (this.state.data[i].type === addressType)
         this.setState({
           fullAddress: this.state.data[i],
-          addAddress: true
+          addAddress: true,
         });
     }
   };
 
-  handleMakeDefaultAddressClick = addressType => {
+  handleMakeDefaultAddressClick = (addressType) => {
     fetch(
       `${getApiEndpoint()}/api/makeDefaultAddress/${localStorage.getItem(
         "loggedInUserPhoneNo"
       )}/${addressType}`
     )
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
-        data => {
+        (data) => {
           if (data[0].code === 100) {
             this.getAddress();
           } else {
             alert("something went wrong");
           }
         },
-        error => {
+        (error) => {
           alert("Something went wrong please try again later");
           this.setState({
-            error
+            error,
           });
         }
       );
@@ -131,7 +131,7 @@ export class AddressManagemnet extends Component {
             ) : (
               <button
                 onClick={this.handleAddAddressClick}
-                className="button w3-btn w3-black"
+                className="button w3-btn w3-white w3-border w3-border-black"
               >
                 Add Address
               </button>
@@ -149,7 +149,7 @@ export class AddressManagemnet extends Component {
             )}
             {this.state.addAddress
               ? ""
-              : data.map(data => (
+              : data.map((data) => (
                   <AddressCard
                     key={data.type}
                     type={data.type}

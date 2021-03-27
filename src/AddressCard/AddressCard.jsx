@@ -36,7 +36,7 @@ export class AddressCard extends Component {
           </div>
           <button
             disabled={this.props.isDeafultAddress === "1" ? true : false}
-            className="w3-btn button w3-black"
+            className="w3-btn button w3-white w3-border w3-border-black"
             style={{ marginTop: "5%" }}
             onClick={() =>
               this.props.makeDeafultAddressClicked(this.props.type)

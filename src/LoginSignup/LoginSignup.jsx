@@ -12,17 +12,17 @@ export class LoginSignup extends Component {
       password: "",
       isPasswordValid: true,
       loggedInUser: "",
-      isUserLogged: true
+      isUserLogged: true,
     };
     this.emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     this.phoneNoRegex = /^\d{10}$/;
   }
 
-  handleInputChanged = event => {
+  handleInputChanged = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  handleBlurEmailPhone = event => {
+  handleBlurEmailPhone = (event) => {
     this.setState({ emailPhone: this.state.emailPhone.trim() });
     if (this.state.emailPhone !== "") {
       if (
@@ -52,17 +52,17 @@ export class LoginSignup extends Component {
         this.state.password
       }`
     )
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
-        data => {
+        (data) => {
           this.setState({
-            userData: data
+            userData: data,
           });
           this.setState({
             loggedInUser:
               this.state.userData.length > 0
                 ? this.state.userData[0].phone_no
-                : ""
+                : "",
           });
           if (this.state.loggedInUser !== "") {
             localStorage.setItem(
@@ -75,9 +75,9 @@ export class LoginSignup extends Component {
             this.setState({ isUserLogged: false });
           }
         },
-        error => {
+        (error) => {
           this.setState({
-            error
+            error,
           });
         }
       );
@@ -141,7 +141,7 @@ export class LoginSignup extends Component {
         </div>
         <div style={{ marginTop: "5%" }}>
           <button
-            className="w3-btn w3-black button"
+            className="w3-btn w3-white w3-border w3-border-black button"
             onClick={this.handleLogInClick}
           >
             LOG IN
@@ -165,7 +165,7 @@ export class LoginSignup extends Component {
         <div>
           <button
             onClick={this.props.createAccoutClicked}
-            className="w3-btn w3-black button"
+            className="w3-btn w3-white w3-border w3-border-black button"
           >
             CREATE ACCOUNT
           </button>

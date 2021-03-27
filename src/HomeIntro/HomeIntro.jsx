@@ -71,7 +71,7 @@ export class HomeIntro extends Component {
         <div className="headingText">
           <div>
             <img
-              src="https://varana-files.s3.us-east-2.amazonaws.com/static_images/varana_logo_white.png"
+              src="https://s3.ap-south-1.amazonaws.com/varana.com-files/static-images/logo/varana-logo-white.png"
               alt="Varana Logo"
               style={{ width: 160, height: 51 }}
             />

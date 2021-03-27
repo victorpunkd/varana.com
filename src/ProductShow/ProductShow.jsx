@@ -413,7 +413,7 @@ export class ProductShow extends Component {
                   <button
                     disabled={data[0].in_stock === 1 ? false : true}
                     onClick={this.handleAddClick}
-                    className="w3-btn w3-white button w3-large w3-border w3-border-black"
+                    className="w3-btn button w3-large w3-white w3-border w3-border-black"
                     style={{ width: "30%" }}
                   >
                     ADD
