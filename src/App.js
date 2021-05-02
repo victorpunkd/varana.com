@@ -45,6 +45,8 @@ export class App extends Component {
       loginForShop: false,
       sexUnderHome: 0,
       isSideBarVisible: false,
+      currentBackgroundImage:
+        "https://s3.ap-south-1.amazonaws.com/varana.com-files/static-images/heroImages/homeBackgroundDhaka.webp",
     };
     this.tempCartDetails = [];
   }
@@ -165,8 +167,23 @@ export class App extends Component {
 
   //Home handle start
 
-  handleApparelClick = () => {
-    this.handleLogoClick();
+  handleCategoryChange = (category) => {
+    if (category === "khaasto") {
+      this.setState({
+        currentBackgroundImage:
+          "https://s3.ap-south-1.amazonaws.com/varana.com-files/static-images/heroImages/homeBackgroundKhasto.webp",
+      });
+    } else if (category === "dhaka") {
+      this.setState({
+        currentBackgroundImage:
+          "https://s3.ap-south-1.amazonaws.com/varana.com-files/static-images/heroImages/homeBackgroundDhaka.webp",
+      });
+    } else if (category === "accessories") {
+      this.setState({
+        currentBackgroundImage:
+          "https://s3.ap-south-1.amazonaws.com/varana.com-files/static-images/heroImages/homeBackgroundAccessories.webp",
+      });
+    }
   };
 
   handleProductClick = (productId) => {
@@ -321,7 +338,7 @@ export class App extends Component {
         style={{
           backgroundImage: `${
             this.state.activeSection === "Home" && this.state.sexUnderHome === 0
-              ? "url('https://varana-files.s3.us-east-2.amazonaws.com/static_images/homeBackgroundDhaka.jpeg')"
+              ? `url('${this.state.currentBackgroundImage}')`
               : ""
           }`,
         }}
@@ -383,9 +400,7 @@ export class App extends Component {
           }
 
           {this.state.activeSection === "Loader" && <Loader />}
-          {this.state.activeSection === "AboutUs" && (
-            <AboutUs apparelClicked={this.handleApparelClick} />
-          )}
+          {this.state.activeSection === "AboutUs" && <AboutUs />}
           {this.state.activeSection === "LoginSignup" && (
             <LoginSignup
               userLoggedIn={this.handleUserLoggedIn}
@@ -412,6 +427,7 @@ export class App extends Component {
           )}
           {this.state.activeSection === "Home" && (
             <Home
+              categoryChanged={this.handleCategoryChange}
               productClicked={this.handleProductClick}
               contactUsClicked={this.handleContactUsClick}
               aboutClicked={this.handleAboutClick}

@@ -84,18 +84,7 @@ export class SideBar extends Component {
   };
 
   render() {
-    const {
-      women,
-      men,
-      unisex,
-      clearance,
-      isLoaded,
-      error,
-      accessories,
-      stationaries,
-      onorder,
-      mask,
-    } = this.state;
+    const { women, men, unisex, isLoaded, error } = this.state;
     if (error) {
       return <div>Seomthing went wrong please refresh the page</div>;
     } else if (!isLoaded) {
@@ -118,7 +107,7 @@ export class SideBar extends Component {
                 this.state.activeGenderSection === "Women" ? "active" : ""
               }`}
             >
-              WOMEN
+              Dhaka
             </div>
             <div
               className={`sectionItems w3-animate-left ${
@@ -148,7 +137,7 @@ export class SideBar extends Component {
                 this.state.activeGenderSection === "Men" ? "active" : ""
               }`}
             >
-              MEN
+              Khaasto
             </div>
             <div
               className={`sectionItems w3-animate-left ${
@@ -178,7 +167,7 @@ export class SideBar extends Component {
                 this.state.activeGenderSection === "Unisex" ? "active" : ""
               }`}
             >
-              UNISEX
+              Accessories
             </div>
             <div
               className={`sectionItems w3-animate-left ${
@@ -201,7 +190,7 @@ export class SideBar extends Component {
               ))}
             </div>
           </div>
-          <div className="section">
+          {/*<div className="section">
             <div
               onClick={this.handleMaskClick}
               className={`sectionHeading ${
@@ -353,7 +342,7 @@ export class SideBar extends Component {
                 </div>
               ))}
             </div>
-          </div>
+          </div>*/}
 
           <div className="section">
             <div

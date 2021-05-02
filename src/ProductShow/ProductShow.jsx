@@ -445,7 +445,9 @@ export class ProductShow extends Component {
                 </div>
               </div>
               <div className="w3-col s6">
-                <div>{data[0].product_description}</div>
+                <div className="productDescriptionText">
+                  {data[0].product_description}
+                </div>
               </div>
             </div>
             <div className="w3-text-gray" style={{ marginTop: "5%" }}>

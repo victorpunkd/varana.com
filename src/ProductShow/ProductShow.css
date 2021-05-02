@@ -99,3 +99,8 @@
   font-size: 12px;
   color: gray;
 }
+
+.productDescriptionText {
+  height: 84px;
+  overflow: hidden;
+}

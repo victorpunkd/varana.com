@@ -9,6 +9,12 @@
   font-size: 20px;
   margin-right: 5px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.headerIcon:active {
+  outline: none;
+  box-shadow: none;
 }
 
 .leftIcon {

@@ -115,7 +115,10 @@ export class Home extends Component {
           </span>
         </div>
         {this.state.collectionSex === 0 && (
-          <HomeIntro handleSexClick={this.handleSexClick} />
+          <HomeIntro
+            handleSexClick={this.handleSexClick}
+            categoryChanged={this.props.categoryChanged}
+          />
         )}
         {/*code for previous design */}
         {/*this.state.body === "Apparel" && (

@@ -30,12 +30,21 @@ export class HomeIntro extends Component {
         secondaryText:
           "Three Layers of amazing mul-mul and cotton makes you feel comfortable like never before",
       });
+      this.props.categoryChanged("khaasto");
     } else if (this.state.primaryText === "khasto") {
-      this.setState({ primaryText: "dhaka" });
+      this.setState({ primaryText: "accessories" });
       this.setState({
         secondaryText:
           "Dhaka Originally called Thaka is a traditional hand made fabric of the indegenous Limbu people of eastern nepal",
       });
+      this.props.categoryChanged("accessories");
+    } else if (this.state.primaryText === "accessories") {
+      this.setState({ primaryText: "dhaka" });
+      this.setState({
+        secondaryText:
+          "accessories description is needed ...... traditional hand made fabric of the indegenous Limbu people of eastern nepal",
+      });
+      this.props.categoryChanged("dhaka");
     }
   };
 
@@ -62,7 +71,9 @@ export class HomeIntro extends Component {
             onClick={() => {
               this.state.primaryText === "dhaka"
                 ? this.props.handleSexClick(1)
-                : this.props.handleSexClick(2);
+                : this.state.primaryText === "khasto"
+                ? this.props.handleSexClick(2)
+                : this.props.handleSexClick(3);
             }}
           >
             Shop
@@ -73,7 +84,7 @@ export class HomeIntro extends Component {
             <img
               src="https://s3.ap-south-1.amazonaws.com/varana.com-files/static-images/logo/varana-logo-white.png"
               alt="Varana Logo"
-              style={{ width: 160, height: 51 }}
+              style={{ width: 200, height: 48 }}
             />
           </div>
           {/*<div className="headingPrimaryText">GAMCHA</div>

@@ -10,7 +10,7 @@ export class ContactUs extends Component {
             <i class="fa fa-envelope"></i>
           </span>
           <span style={{ marginLeft: 10, textAlign: "left" }}>
-            +91 98310 19522
+            +91 97392 44794
           </span>
         </div>
         <div style={{ marginTop: 20 }}>
@@ -25,7 +25,9 @@ export class ContactUs extends Component {
           <span>
             <i class="fa fa-map-marker"></i>
           </span>
-          <span style={{ marginLeft: 10, textAlign: "left" }}>Gurgaon</span>
+          <span style={{ marginLeft: 10, textAlign: "left" }}>
+            Gurgaon, India
+          </span>
         </div>
       </div>
     );
